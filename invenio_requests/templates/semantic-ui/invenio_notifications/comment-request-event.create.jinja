@@ -26,7 +26,7 @@
     <tr>
         <td>
             {%- if event_creator_name -%}
-               {{ _("'@{user_name}' commented on '{request_title}':").format(user_name=event_creator_name, request_title=request_title) }}
+               {{ _("'@{user_name}' commented on '{request_title}':").format(user_name=event_creator_name | e, request_title=request_title) }}
             {%- else -%}
                 {{ _("A new comment was posted on '{request_title}':").format(request_title=request_title) }}
             {%- endif -%}
