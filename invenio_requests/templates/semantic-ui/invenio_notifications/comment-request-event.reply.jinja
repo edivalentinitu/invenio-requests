@@ -33,7 +33,7 @@
     <tr>
         <td>
             {%- if event_creator_name -%}
-                {{ _("'@{user_name}' replied on <a href='{reply_link}'>comment</a>:").format(user_name=event_creator_name, reply_link=reply_link) | safe }}
+                {{ _("'@{user_name}' replied on <a href='{reply_link}'>comment</a>:").format(user_name=event_creator_name | e, reply_link=reply_link) | safe }}
             {%- else -%}
                 {{ _("A new reply was posted on <a href='{reply_link}'>comment</a>:").format(reply_link=reply_link) | safe }}
             {%- endif -%}
